@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="/node_modules/eins-modal/dist/css/eins-modal.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -162,7 +163,7 @@
       <h3>Experiencia</h3>
       <hr />
       <div aria-describedby="pharma-description">
-        <button>
+        <button data-modal-id="myModal">
           <a href="">
             <img src="img/experiencia/logopharma.jpg" alt="Pharma Service">
             <h4> Aplicación .Net </h4>
@@ -204,6 +205,17 @@
   <footer>
     <small>Creada y diseñada por Gastón Mariano Gil.©2023 </small>
   </footer>
+  <div id="myModal" class="eins-modal">
+    <div class="eins-modal-content">
+      <div class="eins-modal-close"></div>
+
+      Mi primer trabajo
+
+      <button class="eins-modal-close-button">OK</button>
+    </div>
+  </div>
+
+  <script src="/node_modules/eins-modal/dist/js/eins-modal.min.js"></script>
 </body>
 
 </html>
