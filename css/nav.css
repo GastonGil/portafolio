@@ -1,0 +1,96 @@
+/* Box Shadow: sombra que se ve detrás.
+*/
+#nav-principal {
+  background: radial-gradient(circle, var(--primary-dark), var(--secondary));
+  box-shadow: 0px 0px 10px 7px var(--black2);
+  font-size: 1.3rem;
+}
+
+/*Lo ponemos en flex para poder separar las 2 secciones con especio en el medio*/
+#nav-principal div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*para que haya un espacio entre el icono y el texto*/
+#icono-chico {
+  width: 5%;
+  margin-right: 0.5rem;
+}
+
+/*text-decoration-none -> por ejemplo quita los subrayados de los enlaces
+-align-items: center, porque sino el icono y el text se muestra arriba.
+*/
+#nav-principal div a {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--gray2);
+}
+
+#nav-principal div a:hover {
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+#nav-principal button {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.2rem 0.7rem;
+  margin: 0.7rem;
+  border: none;
+  cursor: pointer;
+}
+
+#nav-principal.open button {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 2rem;
+}
+
+/* Se le da inicialmente un max-height de 0.
+-Con la transición hacemos que pase al max-height que se le da cuando esta open.
+-Ocultamos su contenido cuando su max-height es 0.*/
+#nav-principal ul {
+  background: linear-gradient(var(--primary-dark), var(--primary));
+  border-top: 1px solid var(--gray2);
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+#nav-principal.open ul {
+  max-height: 150px;
+}
+
+#nav-principal li {
+  list-style: none;
+  padding: 0;
+}
+
+#nav-principal ul a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#nav-principal ul a:hover,
+#nav-principal ul a:focus {
+  color: var(--white);
+  background-color: var(--white);
+}
+
+.nav-principal-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}

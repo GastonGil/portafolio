@@ -1,0 +1,32 @@
+html {
+  background: linear-gradient(var(--primary), var(--primary-dark));
+}
+
+/*La separación entre todas las secciones y su color de fondo.*/
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.even {
+  background: linear-gradient(var(--secondary), var(--secondary-dark));
+}
+
+/* Espacio de 2rem en la parte superior y 0 a los lados*/
+footer {
+  background: linear-gradient(var(--black), var(--black2));
+  padding: 2rem 0;
+}
+
+/*Altura de 0.1rem, ancho de 100%, borde 0 porque ya viene con borde y 
+gradiente: de izquiera a derecha, transparente, hasta un color y transparente de nuevo*/
+hr {
+  height: 0.1rem;
+  max-width: 100%;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    var(--gray2),
+    rgba(0, 0, 0, 0)
+  );
+}

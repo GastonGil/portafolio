@@ -1,0 +1,62 @@
+/* Definimos para todo el body:
+-La fuente.
+-El color de la fuente.
+-Alineamos todos los texto al centro en general.
+-Tamaño de la fuente en general y luego vamos a usar rem en otros elementos con referencia
+a ese tamaño padre. */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--gray3);
+  text-align: center;
+  font-size: 14px;
+}
+
+small {
+  font-size: 1rem;
+}
+header,
+footer,
+section,
+aside {
+  color: var(--white);
+}
+
+/* 2rem, seria el doble de 14px(body)*/
+h3 {
+  font-size: 2rem;
+}
+
+/*Espaciamiento de letras de la tercer parte del tamaño de la fuente del padre(14px)*/
+h2,
+h3,
+h4,
+p {
+  letter-spacing: 0.3rem;
+}
+
+/*Van a ser estilo mayúscula*/
+h1,
+h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+strong {
+  font-weight: bold; /* Establece el texto en negrita */
+  color: var(--white-2);
+}
+
+em {
+  font-style: italic; /* Establece el texto en cursiva */
+  color: var(--white-2);
+  font-weight: bold; /* Establece el texto en negrita */
+}

@@ -1,0 +1,59 @@
+form {
+  font-size: 1.5em;
+  margin-top: 2rem;
+}
+
+form label {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+input,
+textarea,
+input:focus,
+textarea:focus {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0 2rem;
+  color: var(--black);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/*Para que no aparezca la esquina para modificar el tamañao del textarea*/
+
+textarea {
+  resize: none;
+}
+
+form button {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 1rem;
+  font-size: 1.5em;
+  margin: 1rem 3rem 3rem 3rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--secondary-dark);
+}
+
+#nav-redes-sociales img {
+  margin: 1rem;
+  width: 7rem;
+  opacity: 0.6;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+#nav-redes-sociales img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}

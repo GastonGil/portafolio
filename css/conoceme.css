@@ -1,0 +1,30 @@
+#conoceme-texto {
+  margin: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+}
+
+#conoceme-texto :hover {
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 1);
+  transform: scale(1.03);
+}
+
+#conoceme {
+  padding-bottom: 0px;
+}
+#certificaciones {
+  background: linear-gradient(var(--secondary-dark), #23bdff);
+}
+
+#certificaciones a {
+  text-decoration: none;
+  color: var(--gray2);
+}
+
+#certificaciones li {
+  margin: 1rem;
+}
+#certificaciones a:hover {
+  color: var(--white);
+  transition: color 0.3s ease;
+}

@@ -1,0 +1,6 @@
+/*Las utilidades son clases que se pueden reutilizar en diferentes partes del proyecto.
+-No están enfocadas en una sección en específico.*/
+
+.circular {
+  border-radius: 50%;
+}

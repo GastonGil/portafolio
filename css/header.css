@@ -1,0 +1,48 @@
+/* Le agregamos un padding todo al rededor.
+-Lo ponemos en posición relativa porque queremos que el video este en absoluta.
+-overflow ->Para controlar el comportamiento del contenido que excede los límites de un 
+elemento contenedor. 
+-hidden -> oculta lo que sobresale. [visible, scroll, auto(es como scroll pero se agrega solo si es necesario)]
+-Le ponemos el grediente negro porque el video va a ser un poco transparente. */
+header {
+  padding: 5rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(var(--black), var(--black2));
+}
+
+/* Crea un pseudo-elemento ::before en el header para contener el video */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--black), var(--black2));
+  z-index: -1;
+}
+
+/* Ajusta el video para que esté centrado en el pseudo-elemento ::before */
+/* Lo ponemos primero 50% hacia abajo del header y 50% hacia derecha del header.
+-Segundo: lo trasladamos 50% hacia la izquierda del header y 50% hacia arriba.*/
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.6;
+  z-index: 0; /* Establece un z-index no negativo para que el video esté delante del pseudo-elemento ::before */
+}
+
+/* Ajusta el z-index del div para que esté por encima del video */
+header div {
+  position: relative;
+  z-index: 1; /* Establece un z-index positivo para que el div esté por encima del video */
+}
+
+header img {
+  opacity: 0.6;
+}
